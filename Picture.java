@@ -13,6 +13,7 @@ public class Picture
 {
     private Square wall;
     private Square window;
+    private Square floor;
     private Triangle roof;
     private Circle sun;
 
@@ -35,6 +36,13 @@ public class Picture
         wall.changeSize(120);
         wall.makeVisible();
         
+        floor = new Square();
+        floor.changeColor("green");
+        floor.moveVertical(130);
+        floor.moveHorizontal(-350);
+        floor.changeSize(1000);
+        floor.makeVisible();
+        
         window = new Square();
         window.changeColor("black");
         window.moveHorizontal(-120);
@@ -51,9 +59,10 @@ public class Picture
         sun = new Circle();
         sun.changeColor("yellow");
         sun.moveHorizontal(100);
-        sun.moveVertical(-40);
+        sun.moveVertical(75);
         sun.changeSize(80);
         sun.makeVisible();
+        sun.slowMoveVertical(-150);
     }
 
     /**
