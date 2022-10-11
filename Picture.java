@@ -16,6 +16,7 @@ public class Picture
     private Square floor;
     private Triangle roof;
     private Circle sun;
+    private Person peaton;
 
     /**
      * Constructor for objects of class Picture
@@ -71,6 +72,12 @@ public class Picture
     public void atardecer(){
         if(wall != null){   //only if it's painted already
             sun.slowMoveVertical(150);
+            
+            peaton = new Person();
+            peaton.moveHorizontal(-500);
+            peaton.moveVertical(40);
+            peaton.makeVisible();
+            peaton.slowMoveHorizontal(300);
         }
     }
 
