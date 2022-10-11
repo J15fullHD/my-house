@@ -64,6 +64,15 @@ public class Picture
         sun.makeVisible();
         sun.slowMoveVertical(-150);
     }
+    
+    /**
+     * Change the position of the sun in the picture down
+     */
+    public void atardecer(){
+        if(wall != null){   //only if it's painted already
+            sun.slowMoveVertical(150);
+        }
+    }
 
     /**
      * Change this picture to black/white display
